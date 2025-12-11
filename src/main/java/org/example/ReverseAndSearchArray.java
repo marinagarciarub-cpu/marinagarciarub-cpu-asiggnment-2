@@ -31,32 +31,24 @@ public class ReverseAndSearchArray {
         System.out.println("Enter the number to look up");
         int numberSearch = scanner.nextInt();
         boolean exist = false;
-        String index= "";
+        String index = "";
 
-        for(int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             if (original[i] == numberSearch) {
                 index += i + ", ";
                 exist = true;
             }
         }
+
+        System.out.println("Results: ");
+        if (exist) {
+            System.out.println("the number " + numberSearch + "was found!");
+            System.out.println("Index: " + index);
+        } else {
+            System.out.println("The number " + numberSearch + "was not found");
+        }
+
+        scanner.close();
     }
 
-
-
-
-
-
-                // 8. Resultado
-                System.out.println("\nRESULTADO:");
-                if (encontrado) {
-        // Eliminamos la última coma y espacio: "1, 4, " -> "1, 4"
-        indices = indices.substring(0, indices.length() - 2);
-                System.out.println("✅ El número " + X + " FUE encontrado.");
-                    System.out.println("   Índice(s): " + indices);
-                } else {
-                        System.out.println("❌ El número " + X + " NO fue encontrado.");
-                }
-
-                        entrada.close();
-            }
-                    }
+}
