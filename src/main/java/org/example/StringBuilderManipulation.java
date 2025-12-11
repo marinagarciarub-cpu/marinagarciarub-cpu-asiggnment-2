@@ -22,8 +22,19 @@ public class StringBuilderManipulation {
             System.out.println("Invalid input");
             return;
         }
+        StringBuilder result = new StringBuilder();
+        for(String word: wordList) {
+            for(int i=0; i<numRepeat; i++) {
+                result.append(word).append(" ");
+            }
+        }
+        System.out.println("Output " + result.toString());
 
     }
-
-
+    public static void main(String[] args) {
+        // Llamar a repeater() desde el main de la clase
+        repeater();
+    }
 }
+
+
