@@ -28,6 +28,35 @@ public class ReverseAndSearchArray {
         }
         System.out.println("Reversed array:" + Arrays.toString(reversed));
 
-    }
-}
+        System.out.println("Enter the number to look up");
+        int numberSearch = scanner.nextInt();
+        boolean exist = false;
+        String index= "";
 
+        for(int i=0; i<n; i++) {
+            if (original[i] == numberSearch) {
+                index += i + ", ";
+                exist = true;
+            }
+        }
+    }
+
+
+
+
+
+
+                // 8. Resultado
+                System.out.println("\nRESULTADO:");
+                if (encontrado) {
+        // Eliminamos la última coma y espacio: "1, 4, " -> "1, 4"
+        indices = indices.substring(0, indices.length() - 2);
+                System.out.println("✅ El número " + X + " FUE encontrado.");
+                    System.out.println("   Índice(s): " + indices);
+                } else {
+                        System.out.println("❌ El número " + X + " NO fue encontrado.");
+                }
+
+                        entrada.close();
+            }
+                    }
